@@ -14,9 +14,9 @@
     <ApplicationIcon>Assets\truck.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Assets\truck.ico" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\delivery-truck-svgrepo-com.svg" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\discord.ico" CopyToOutputDirectory="PreserveNewest" />
-    <Content Include="Assets\discord-svgrepo-com.svg" CopyToOutputDirectory="PreserveNewest" />
+    <EmbeddedResource Include="Assets\truck.ico" />
+    <EmbeddedResource Include="Assets\discord.ico" />
+    <None Include="Assets\delivery-truck-svgrepo-com.svg" />
+    <None Include="Assets\discord-svgrepo-com.svg" />
   </ItemGroup>
 </Project>

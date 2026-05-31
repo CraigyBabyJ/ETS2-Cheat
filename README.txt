@@ -7,8 +7,9 @@ ETS2 version: 1.60
 Discord: https://discord.craigybabyj.com
 
 Download:
-  The GitHub release ZIP is a small framework-dependent build. It requires
-  the Microsoft .NET 6 Desktop Runtime for Windows x64 to be installed.
+  The GitHub release ZIP is a small framework-dependent build. Keep the files
+  together in the extracted folder and run "ETS2 Cheat.exe". It requires the
+  Microsoft .NET 6 Desktop Runtime for Windows x64 to be installed.
 
 Use:
   1. Start ETS2 and load your save.

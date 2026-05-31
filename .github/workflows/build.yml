@@ -22,7 +22,7 @@ jobs:
         run: dotnet restore
 
       - name: Publish
-        run: dotnet publish -c Release --self-contained false -p:UseAppHost=true -o publish
+        run: dotnet publish -c Release --self-contained false -p:UseAppHost=true -p:DebugType=None -p:DebugSymbols=false -o publish
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

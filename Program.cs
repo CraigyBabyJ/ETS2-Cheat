@@ -43,11 +43,8 @@ internal sealed class MainForm : Form
         MinimumSize = new Size(560, 340);
         BackColor = WindowBack;
         ForeColor = ButtonFore;
-        var iconPath = Path.Combine(AppContext.BaseDirectory, "Assets", "truck.ico");
-        if (File.Exists(iconPath))
-        {
-            Icon = new Icon(iconPath);
-        }
+        using var truckIconStream = typeof(MainForm).Assembly.GetManifestResourceStream("Ets2DamagePatcherGui.Assets.truck.ico");
+        if (truckIconStream is not null) Icon = new Icon(truckIconStream);
 
         var title = new Label
         {
@@ -126,8 +123,7 @@ internal sealed class MainForm : Form
         _log.ForeColor = Color.FromArgb(225, 232, 240);
         _log.BorderStyle = BorderStyle.FixedSingle;
 
-        var discordIconPath = Path.Combine(AppContext.BaseDirectory, "Assets", "discord.ico");
-        var footer = MakeFooter(discordIconPath);
+        var footer = MakeFooter();
 
         Controls.Add(_log);
         Controls.Add(footer);
@@ -157,7 +153,7 @@ internal sealed class MainForm : Form
         return button;
     }
 
-    private static Panel MakeFooter(string iconPath)
+    private static Panel MakeFooter()
     {
         var footer = new Panel
         {
@@ -190,9 +186,10 @@ internal sealed class MainForm : Form
             Cursor = Cursors.Hand,
             BackColor = PanelBack
         };
-        if (File.Exists(iconPath))
+        using var discordIconStream = typeof(MainForm).Assembly.GetManifestResourceStream("Ets2DamagePatcherGui.Assets.discord.ico");
+        if (discordIconStream is not null)
         {
-            using var icon = new Icon(iconPath, 32, 32);
+            using var icon = new Icon(discordIconStream, 32, 32);
             discordIcon.Image = icon.ToBitmap();
         }
 
