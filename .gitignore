@@ -2,6 +2,7 @@ bin/
 obj/
 run/
 release/
+release-*/
 .vs/
 *.user
 *.suo
