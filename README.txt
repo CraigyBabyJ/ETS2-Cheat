@@ -20,7 +20,3 @@ Buttons:
   -100,000 Money - removes 100,000 euros from the current profile money.
   Refresh        - shows whether the game code is patched.
   Restore        - restores the original bytes.
-
-Update notes:
-  See AGENTS.md for the pointer chain, code patches, trace history, and
-  re-finding workflow after an ETS2 update.

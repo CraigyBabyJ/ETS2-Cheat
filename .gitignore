@@ -1,9 +1,11 @@
 bin/
 obj/
 run/
+release/
 .vs/
 *.user
 *.suo
 *.log
+*.zip
 AGENTS.md
 agent.md
